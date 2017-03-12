@@ -1,13 +1,17 @@
-import json
+import json, os, chardet, codecs
+import pprint
 
 
 def load_data(filepath):
-    pass
+    if os.path.exists(filepath):
+        with open('new.json', 'r', encoding='utf-8') as fh:
+            return json.load(fh)
 
 
 def pretty_print_json(data):
-    pass
+    pprint.pprint(data)
 
 
 if __name__ == '__main__':
-    pass
+    data_alkoshops = load_data('alkoshops.json')
+    print(pretty_print_json(data_alkoshops))
