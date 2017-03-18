@@ -3,9 +3,7 @@
 This module uses an already ready formatting function
 Works with a json-file downloaded from https://data.mos.ru/opendata/7710881420-magaziny-alkogolnye-napitki
 
-# Quickstart
 
-https://github.com/lubyagin/python-json-pprint
 
 Example of script launch on Linux, Python 3.5:
 
@@ -36,7 +34,7 @@ $ python pprint_json.py <path to file>
             'geoData': {'coordinates': [37.522740265286885, 55.82726147101704],
                         'type': 'Point'},
             'global_id': 14939869},
-
+```
 
 
 # Project Goals

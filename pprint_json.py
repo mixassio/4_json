@@ -4,8 +4,10 @@ import pprint
 
 def load_data(filepath):
     if os.path.exists(filepath):
-        with open('new.json', 'r', encoding='utf-8') as fh:
+        char_type = chardet.detect(open(filepath, "rb").read())['encoding']
+        with codecs.open(filepath, 'rb', encoding=char_type) as fh:
             return json.load(fh)
+
 
 
 def pretty_print_json(data):
