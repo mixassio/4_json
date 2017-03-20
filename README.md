@@ -4,7 +4,6 @@ This module uses an already ready formatting function
 Works with a json-file downloaded from https://data.mos.ru/opendata/7710881420-magaziny-alkogolnye-napitki
 
 
-
 Example of script launch on Linux, Python 3.5:
 
 ```#!bash
