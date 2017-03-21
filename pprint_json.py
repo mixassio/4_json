@@ -16,9 +16,9 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-    if sys.argv[1]:
-        data_alkoshops = load_data(sys.argv[1])
-    else:
+    try:
+        if sys.argv[1]:
+            data_alkoshops = load_data(sys.argv[1])
+            print(pretty_print_json(data_alkoshops))
+    except IndexError:
         print('input path to file')
-    print(pretty_print_json(data_alkoshops))
-
