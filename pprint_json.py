@@ -22,17 +22,7 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     parser = create_parser()
     namespace = parser.parse_args()
     data_alkoshops = load_data(namespace.filepath)
     print(pretty_print_json(data_alkoshops))
-
-=======
-    try:
-        if sys.argv[1]:
-            data_alkoshops = load_data(sys.argv[1])
-            print(pretty_print_json(data_alkoshops))
-    except IndexError:
-        print('input path to file')
->>>>>>> 045091021dd15549881acbeb6e509db49d7e22d2
