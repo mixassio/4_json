@@ -1,5 +1,11 @@
+import argparse
 import json, os, chardet, codecs
 import sys
+
+def create_parser ():
+    parser = argparse.ArgumentParser()
+    parser.add_argument ('filepath')
+    return parser
 
 
 def load_data(filepath):
@@ -16,9 +22,8 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-    if sys.argv[1]:
-        data_alkoshops = load_data(sys.argv[1])
-    else:
-        print('input path to file')
+    parser = create_parser()
+    namespace = parser.parse_args()
+    data_alkoshops = load_data(namespace.filepath)
     print(pretty_print_json(data_alkoshops))
 
